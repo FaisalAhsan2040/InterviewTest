@@ -31,4 +31,5 @@ class Department extends Model
     {
         return url('/admin/departments/'.$this->getKey());
     }
+    
 }

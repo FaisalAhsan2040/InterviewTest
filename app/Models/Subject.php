@@ -9,6 +9,7 @@ class Subject extends Model
     protected $table = 'subject';
 
     protected $fillable = [
+        'user_id',
         'subject_name',
         'subject_type',
         'course_id',

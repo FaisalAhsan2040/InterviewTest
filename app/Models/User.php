@@ -9,6 +9,7 @@ class User extends Model
     protected $fillable = [
         'name',
         'email',
+        'department_id',
         'email_verified_at',
         'password',
     
@@ -36,8 +37,17 @@ class User extends Model
         return url('/admin/users/'.$this->getKey());
     }
 
+    public function blog()
+    {
+        return $this->hasMany(Blog::class,'id','user_id');
+    }
+    public function department()
+    {
+        return $this->belongsTo(Department::class,'id','department_id');
+    }
+    
     public function subject()
     {
-        
+        return $this->hasMany(Subject::class,'id','user_id');
     }
 }
