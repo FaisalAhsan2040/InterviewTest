@@ -97,3 +97,28 @@ $factory->define(App\Models\User::class, static function (Faker\Generator $faker
         
     ];
 });
+/** @var  \Illuminate\Database\Eloquent\Factory $factory */
+$factory->define(App\Models\Blog::class, static function (Faker\Generator $faker) {
+    return [
+        'user_id' => $faker->randomNumber(5),
+        'blog_name' => $faker->sentence,
+        'blog_category' => $faker->sentence,
+        'status' => $faker->sentence,
+        'created_at' => $faker->dateTime,
+        'updated_at' => $faker->dateTime,
+        
+        
+    ];
+});
+/** @var  \Illuminate\Database\Eloquent\Factory $factory */
+$factory->define(App\Models\BlogCategory::class, static function (Faker\Generator $faker) {
+    return [
+        'user_id' => $faker->sentence,
+        'blog_category_name' => $faker->sentence,
+        'status' => $faker->sentence,
+        'created_at' => $faker->dateTime,
+        'updated_at' => $faker->dateTime,
+        
+        
+    ];
+});

@@ -35,4 +35,9 @@ class User extends Model
     {
         return url('/admin/users/'.$this->getKey());
     }
+
+    public function subject()
+    {
+        
+    }
 }

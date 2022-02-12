@@ -179,5 +179,42 @@ return [
         ],
     ],
 
+    'blog' => [
+        'title' => 'Blog',
+
+        'actions' => [
+            'index' => 'Blog',
+            'create' => 'New Blog',
+            'edit' => 'Edit :name',
+        ],
+
+        'columns' => [
+            'id' => 'ID',
+            'user_id' => 'User',
+            'blog_name' => 'Blog name',
+            'blog_category' => 'Blog category',
+            'status' => 'Status',
+            
+        ],
+    ],
+
+    'blog-category' => [
+        'title' => 'Blog Categories',
+
+        'actions' => [
+            'index' => 'Blog Categories',
+            'create' => 'New Blog Category',
+            'edit' => 'Edit :name',
+        ],
+
+        'columns' => [
+            'id' => 'ID',
+            'user_id' => 'User',
+            'blog_category_name' => 'Blog category name',
+            'status' => 'Status',
+            
+        ],
+    ],
+
     // Do not delete me :) I'm used for auto-generation
 ];

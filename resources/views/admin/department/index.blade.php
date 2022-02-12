@@ -50,7 +50,9 @@
                                         </th>
 
                                         <th is='sortable' :column="'id'">{{ trans('admin.department.columns.id') }}</th>
-                                        <th is='sortable' :column="'D_name'">{{ trans('admin.department.columns.D_name') }}</th>
+                                        <th is='sortable' :column="'Department_name'">Department Name</th>
+                                        <th is='sortable' :column="'block_number'">Block Number</th>
+                                        <th is='sortable' :column="'status'">status</th>
 
                                         <th></th>
                                     </tr>
@@ -76,6 +78,9 @@
 
                                     <td>@{{ item.id }}</td>
                                         <td>@{{ item.D_name }}</td>
+                                        <td>@{{ item.block_number }}</td>
+                                        <td>@{{ item.status }}</td>
+
                                         
                                         <td>
                                             <div class="row no-gutters">

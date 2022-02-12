@@ -138,3 +138,33 @@ Route::middleware(['auth:' . config('admin-auth.defaults.guard'), 'admin'])->gro
         });
     });
 });
+
+/* Auto-generated admin routes */
+Route::middleware(['auth:' . config('admin-auth.defaults.guard'), 'admin'])->group(static function () {
+    Route::prefix('admin')->namespace('App\Http\Controllers\Admin')->name('admin/')->group(static function() {
+        Route::prefix('blogs')->name('blogs/')->group(static function() {
+            Route::get('/',                                             'BlogController@index')->name('index');
+            Route::get('/create',                                       'BlogController@create')->name('create');
+            Route::post('/',                                            'BlogController@store')->name('store');
+            Route::get('/{blog}/edit',                                  'BlogController@edit')->name('edit');
+            Route::post('/bulk-destroy',                                'BlogController@bulkDestroy')->name('bulk-destroy');
+            Route::post('/{blog}',                                      'BlogController@update')->name('update');
+            Route::delete('/{blog}',                                    'BlogController@destroy')->name('destroy');
+        });
+    });
+});
+
+/* Auto-generated admin routes */
+Route::middleware(['auth:' . config('admin-auth.defaults.guard'), 'admin'])->group(static function () {
+    Route::prefix('admin')->namespace('App\Http\Controllers\Admin')->name('admin/')->group(static function() {
+        Route::prefix('blog-categories')->name('blog-categories/')->group(static function() {
+            Route::get('/',                                             'BlogCategoriesController@index')->name('index');
+            Route::get('/create',                                       'BlogCategoriesController@create')->name('create');
+            Route::post('/',                                            'BlogCategoriesController@store')->name('store');
+            Route::get('/{blogCategory}/edit',                          'BlogCategoriesController@edit')->name('edit');
+            Route::post('/bulk-destroy',                                'BlogCategoriesController@bulkDestroy')->name('bulk-destroy');
+            Route::post('/{blogCategory}',                              'BlogCategoriesController@update')->name('update');
+            Route::delete('/{blogCategory}',                            'BlogCategoriesController@destroy')->name('destroy');
+        });
+    });
+});

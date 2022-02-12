@@ -6,3 +6,5 @@ import './department';
 import './role';
 import './permission';
 import './user';
+import './blog';
+import './blog-category';
